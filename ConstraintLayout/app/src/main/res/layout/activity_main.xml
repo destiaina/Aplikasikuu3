@@ -6,13 +6,73 @@
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
-	<TextView
+	<Button
+		android:id="@+id/button"
+		android:layout_width="match_parent"
+		android:layout_height="46dp"
+		android:text="Top"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.001" />
+
+	<Button
+		android:id="@+id/button2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Bottom"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="@+id/button"
+		app:layout_constraintVertical_bias="1.0" />
+
+	<Button
+		android:id="@+id/button3"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Hello World!"
+		android:layout_marginBottom="636dp"
+		android:text="Left Below up"
 		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintLeft_toLeftOf="parent"
-		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<Button
+		android:id="@+id/button4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="230dp"
+		android:text="Right above bottom"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.929" />
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		app:layout_constraintGuide_begin="302dp"
+		app:layout_constraintGuide_percent="0.8"
+		android:background="FF3647"
+		/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="112dp"
+        android:background="#FF3647"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.385" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
